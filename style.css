@@ -1,3 +1,126 @@
-.miprimeraclase{
-			color: red;
-		}
+/*
+	Pseudo Clase
+:not("Referencia")
+:first-child
+:
+	Selectores: > < + ~ 
+*/
+/**/
+*{
+	background-color: white;
+}
+
+/*Elementos html,body, */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section,div {
+	display: block;
+}
+
+
+/*Etiquetas*/
+h1, h2, h3, h4, h5{
+	color: blue;
+	font-family: arial,sans-serif;
+	font: bold;
+	line-height: 1.5rem;
+	letter-spacing: 1px;
+	padding-top: 10px;
+	widows: 50%;
+}
+p{
+	font-size: 16px ;
+	line-height: 1.5rem; /*Espacio entre linea*/
+	font-family: Playfair Display, sans-serif;
+	text-align: left;
+	widows: 100%;
+}
+a{
+	text-decoration: none;
+
+}
+
+/*Estos son clases*/
+
+.divleft{
+	margin: 0px; /*tamaño de los margenes del bloque, auto es para margen superior e inferior*/
+	width: 60%; /*tamaño en porsentaje que mostrata el bloque*/
+	position: relative;
+	text-align: left; /*texto alineado a la izquierda de la pantalla*/
+	float: left; /*Bloque flotante*/
+}
+.columnaside{
+	margin: 0px;
+	padding: 5px;
+	width: 30%;
+	position: static;
+	text-align: left;
+	float: left;
+}
+.margen{
+		clear: both;
+}
+
+	div.margen{
+		text-align: left;
+		border: 5px solid blue;
+		border-radius: 50px;
+		padding: 10px;
+		margin: 1%;
+	}
+	
+	figure.margen{
+		text-align: left;
+		border: 5px solid blue;
+		border-radius: 50px;
+		padding: 10px;
+		margin: 1%;
+	}
+
+.image {
+	border: 0;
+	border-radius: 4px;
+	display: inline-block;
+	position: relative;
+}
+/*Menu de navegación*/
+.navmenu{
+	background: #FFFFFF;
+	text-align: center;
+	height: 40px;
+	width: 100%;
+	position: static;
+	z-index: 1;
+
+}
+	.navmenu lu{
+		padding: 0px;
+	}
+	.navmenu li{
+		display: inline-block;
+		font-family: "Comic Sans", sans-serif;
+		font-size: 20px;
+		letter-spacing: 2px;
+		text-transform: uppercase;		
+		margin: 10px; 
+	}
+
+/*Estos son id*/
+#cabecera{
+	border-bottom: 2px solid black;
+	padding: 5px;
+	margin: 0;
+	text-align: left;
+}
+	#cabecera h1{
+		color: black;
+	}
+
+#piedepagina{
+	border-top: 2px solid black;
+	padding: 5px;
+	margin: 1%;
+	text-align: center;
+	clear: both;
+}
+
+
+
