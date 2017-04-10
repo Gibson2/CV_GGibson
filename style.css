@@ -1,125 +1,140 @@
-/*
-	Pseudo Clase
-:not("Referencia")
-:first-child
-:
-	Selectores: > < + ~ 
-*/
-/**/
-*{
-	background-color: white;
+/*Elementos html,body - Reset */
+html {
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
 }
 
-/*Elementos html,body, */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section,div {
-	display: block;
+body {
+  margin: 20px auto 0;	/*tamaño de los margenes del bloque, auto es para margen superior e inferior*/
+  width: 90%;
+  padding: 0;
+  border: 0;
+}
+
+article, aside, details, div, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
 }
 
 
 /*Etiquetas*/
 h1, h2, h3, h4, h5{
 	color: blue;
-	font-family: arial,sans-serif;
+	font-family: "verdana", "arial", sans-serif;
 	font: bold;
+	text-align: left;
 	line-height: 1.5rem;
 	letter-spacing: 1px;
-	padding-top: 10px;
-	widows: 50%;
 }
+
 p{
 	font-size: 16px ;
 	line-height: 1.5rem; /*Espacio entre linea*/
 	font-family: Playfair Display, sans-serif;
 	text-align: left;
-	widows: 100%;
-}
-a{
-	text-decoration: none;
-
 }
 
 /*Estos son clases*/
-
-.divleft{
-	margin: 0px; /*tamaño de los margenes del bloque, auto es para margen superior e inferior*/
-	width: 60%; /*tamaño en porsentaje que mostrata el bloque*/
+.container{
 	position: relative;
-	text-align: left; /*texto alineado a la izquierda de la pantalla*/
-	float: left; /*Bloque flotante*/
-}
-.columnaside{
-	margin: 0px;
+	display: inline-block;
+	width: 100%;
 	padding: 5px;
-	width: 30%;
-	position: static;
 	text-align: left;
 	float: left;
 }
-.margen{
-		clear: both;
+
+article.container{
+	width: 67%;
 }
 
-	div.margen{
-		text-align: left;
-		border: 5px solid blue;
-		border-radius: 50px;
-		padding: 10px;
-		margin: 1%;
-	}
-	
-	figure.margen{
-		text-align: left;
-		border: 5px solid blue;
-		border-radius: 50px;
-		padding: 10px;
-		margin: 1%;
-	}
-
-.image {
-	border: 0;
-	border-radius: 4px;
+.column_aside{
 	display: inline-block;
 	position: relative;
+	margin: 10px;
+	width: 30%;
+	text-align: center;
+	float: left;
 }
+
+.margen{
+	display: block;
+	margin: 10px 0;
+	padding: 15px;
+	border: 5px solid blue;
+	border-radius: 50px;
+	height: auto;
+}
+
+
 /*Menu de navegación*/
 .navmenu{
-	background: #FFFFFF;
-	text-align: center;
-	height: 40px;
-	width: 100%;
+	display: inline-block;
 	position: static;
-	z-index: 1;
-
+	background: blue;
+	width: 100%;
+	max-height: 50px;
+	margin: 0;	
+	padding: 10px 0;
+	text-align: center;
 }
-	.navmenu lu{
-		padding: 0px;
-	}
-	.navmenu li{
-		display: inline-block;
-		font-family: "Comic Sans", sans-serif;
-		font-size: 20px;
-		letter-spacing: 2px;
-		text-transform: uppercase;		
-		margin: 10px; 
-	}
+
+.navmenu ul{
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+.navmenu li{
+	display: inline;
+	margin-left: 40px;
+}
+
+.navmenu li a{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: ‘Arial Black’, arial, sans-serif;
+	font-style: bold;
+	font-size: 20px;
+	letter-spacing: 2px;
+	color: white;
+}
+
+/*Clearfix coloca el flujo normal de los bloques*/
+.clearfix{
+	clear: both;
+}
+
+.row::after{
+	 display: block;
+	 clear: both;
+}
+
+[class*="col-"]{
+	float: left;
+	background: LightBlue;
+}
+.col-1{width: 10%;}
+
+.col-offset{margin-left:1%;}
+
+
 
 /*Estos son id*/
 #cabecera{
-	border-bottom: 2px solid black;
-	padding: 5px;
-	margin: 0;
+	border-bottom: 4px solid black;
+	padding: 5px 0 20px;
+	width: 100%;
 	text-align: left;
 }
-	#cabecera h1{
-		color: black;
-	}
+
+#cabecera h1{
+	color: black;
+}
 
 #piedepagina{
-	border-top: 2px solid black;
-	padding: 5px;
-	margin: 1%;
-	text-align: center;
-	clear: both;
+	border-top: 4px solid black;
+	padding: 10px 5px 0;
+	text-align: left;
 }
 
 
