@@ -1,27 +1,31 @@
 /*Elementos html,body - Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
+  font-family: sans-serif;
+  line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  margin: 20px auto 0;	/*tamaño de los margenes del bloque, auto es para margen superior e inferior*/
-  width: 90%;
+  margin: 5% 20% 0;	/*tamaño de los margenes del bloque, auto es para margen superior e inferior*/
   padding: 0;
   border: 0;
-}
-
-article, aside, details, div, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
+  background-color: #C7D9FF;
 }
 
 
 /*Etiquetas*/
 h1, h2, h3, h4, h5{
-	color: blue;
 	font-family: "verdana", "arial", sans-serif;
 	font: bold;
-	text-align: left;
 	line-height: 1.5rem;
 	letter-spacing: 1px;
 }
@@ -34,14 +38,33 @@ p{
 }
 
 /*Estos son clases*/
-.container{
-	position: relative;
-	display: inline-block;
-	width: 100%;
-	padding: 5px;
-	text-align: left;
-	float: left;
+.clearfix::after {
+  display: block;
+  clear: both;
 }
+
+.container{
+	display: block;
+	max-width: 100%;
+	background-color: yellowgreen;
+	clear: both;
+}
+
+.container-1{
+	max-width: 60%;
+	padding: 1vh;
+	float: left;
+	background-color: blue;
+}
+
+.container-2{
+	display: block;
+	max-width: 40%;
+	padding: 1vh;
+	float: left;
+	background-color: red;
+}
+
 
 article.container{
 	width: 67%;
@@ -100,14 +123,14 @@ article.container{
 }
 
 /*Clearfix coloca el flujo normal de los bloques*/
-.clearfix{
-	clear: both;
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
 }
 
-.row::after{
-	 display: block;
-	 clear: both;
-}
+
+
 
 [class*="col-"]{
 	float: left;
@@ -115,21 +138,58 @@ article.container{
 }
 .col-1{width: 10%;}
 
-.col-offset{margin-left:1%;}
-
-
-
-/*Estos son id*/
-#cabecera{
-	border-bottom: 4px solid black;
-	padding: 5px 0 20px;
-	width: 100%;
-	text-align: left;
+.col-offset{margin-left:1%;
 }
 
-#cabecera h1{
+.img-responsive{
+	max-width: 100%;
+}
+
+/*Clases del Header*/
+.new-header{
+	background-color: white;
+	margin-top: 20%;
+	max-width: 100%;
+
+}
+
+.img-banner{
+	max-height: 20vh;
+}
+
+.img-cv{
+	max-width: 100%;
+	display: block;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	top: -20vh;
+	max-height: 40vh;
+	border-radius: 100%;
+	border: solid 2.5vh #C7D9FF;
+	background-color: #3D97F7;
+}
+
+.cabecera-div{
+	padding: 2% 0;
+	text-align: center;
+}
+
+.cabecera-div h1 {
 	color: black;
+
 }
+.cabecera-div h2{
+	color: blue;
+}
+
+/******/
+/*Clases del Contenido*/
+.row::after{
+	 display: block;
+	 clear: both;
+}
+
 
 #piedepagina{
 	border-top: 4px solid black;
