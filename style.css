@@ -5,18 +5,12 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
 body {
+	font-family: Arial, sans-serif;
   margin: 5% 20% 0;	/*tamaño de los margenes del bloque, auto es para margen superior e inferior*/
   padding: 0;
   border: 0;
-  background-color: #C7D9FF;
+  background-color: #CBD2FF;
 }
 
 
@@ -26,24 +20,24 @@ h1, h2, h3, h4, h5{
 	font: bold;
 	line-height: 1.5rem; /*Espacio entre linea*/
 	letter-spacing: 1px;
+	color: blue;
 }
 
 p{
-	font-size: 1.2vw ;
 	line-height: 1.5rem; /*Espacio entre linea*/
-	text-align: left;
+  font-size: 1rem;
 }
 
 
 /*Clases del Header*/
 .new-header{
 	background-color: white;
-	margin-top: 20%;
+	margin-top: 20vh;
 	max-width: 100%;
 }
 
 .img-banner{
-	max-height: 20vh;
+	max-height: 10vh;
 }
 
 .img-cv{
@@ -52,10 +46,10 @@ p{
 	position: relative;
 	margin-right: auto;
 	margin-left: auto;
-	top: -20vh;
-	max-height: 40vh;
+	top: -10vh;
+	max-height: 22vh;
 	border-radius: 100%;
-	border: solid 1.5vw #C7D9FF;
+	border: solid 0.5vw #CBD2FF;
 	background-color: #3D97F7;
 }
 
@@ -79,14 +73,14 @@ p{
 	background-color: white;
 	border-top-style: double;
 	border-top-color: black;
-	max-width: 100%;
+	width: 100%;
 	float: left;	
 }
 
 .container-1, .container-2{
-	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 0 0.5vw;
 	float: left;
 	}
 
@@ -102,50 +96,80 @@ p{
 .row{
 	 display: block;
 	 max-width: 100%;
+	 margin: 0;
+	 padding: 0;
+	 border: none;
 	 clear: both;
 }
 
 .col-10, .col-25, .col-75, .col-90{
   position: relative;
-  width: 100%;
+  max-width: 100%;
   min-height: 2px;
-  float: left;
   padding: 0 0.5vw;
-  border: solid white 0.1vw;
-  text-align: center;
+  border: solid white 0.5vw;
+  text-align: left;
+  float: left;
 }
 
 .col-10 {
   max-width: 10%;
-	background-color: red;
 }
 
 .col-25 {
   max-width: 25%;
-	background-color: red;
+	background-color: #CBD2FF;
 }
 
 .col-75 {
   max-width: 75%;
-	background-color: red;
 }
 
 .col-90 {
   max-width: 90%;
-	background-color: red;
+	background-color: #CBD2FF;
 }
 
+@media (min-width: 350px) {
+  .container-1 {
+  	max-width: 720px;
+    clear: both;
+  }
+}
+.barra-30{
 
+	background-color: blue;
+	border: 0;
+	margin-top: 1vh;
+	max-width: 30%;
+	color: white;
+	text-align: left;
+}
+.barra-30 p{
+	display: inline;
+	padding: 2px 0px 0px 7px;
+}
+
+.barra-80{
+	background-color: blue;
+	max-width: 80%;
+	color: white;
+	text-align: left;
+}
+.barra-80 p{
+	display: inline;
+	padding: 2px 0px 0px 7px;
+}
 
 .new-footer{
 	max-width: 100%;
 	background-color: white;
-	text-align: left;
+	padding: 1vw;
+	text-align: right;
 	border-top-style: double;
 	border-top-color: black;
 	clear: both;
 }
-
 
 
 /*Menu de navegación*/
