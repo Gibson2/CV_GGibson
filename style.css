@@ -7,20 +7,19 @@
 
 body {
 	font-family: Arial, sans-serif;
-  margin: 5% 20% 0;	/*tamaño de los margenes del bloque, auto es para margen superior e inferior*/
+  margin: 0 15% 0;	/*tamaño de los margenes del bloque, auto es para margen superior e inferior*/
   padding: 0;
   border: 0;
-  background-color: #CBD2FF;
+  background-color: #f0f8ff;
 }
 
 
 /*Etiquetas*/
 h1, h2, h3, h4, h5{
 	font-family: "verdana", "arial", sans-serif;
-	font: bold;
 	line-height: 1.5rem; /*Espacio entre linea*/
 	letter-spacing: 1px;
-	color: blue;
+	color: #3D97F7;
 }
 
 p{
@@ -49,7 +48,7 @@ p{
 	top: -10vh;
 	max-height: 22vh;
 	border-radius: 100%;
-	border: solid 0.5vw #CBD2FF;
+	border: solid 0.5vw #f0f8ff;
 	background-color: #3D97F7;
 }
 
@@ -60,10 +59,6 @@ p{
 
 .cabecera-div h1 {
 	color: black;
-
-}
-.cabecera-div h2{
-	color: blue;
 }
 
 /******/
@@ -73,26 +68,37 @@ p{
 	background-color: white;
 	border-top-style: double;
 	border-top-color: black;
+	padding: 0 2%;
 	width: 100%;
-	float: left;	
+	float: left;
 }
 
-.container-1, .container-2{
+.container-article, .container-section{
+	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0 0.5vw;
 	float: left;
 	}
 
-.container-1{
-	max-width: 60%;
+@media (min-width: 841px){
+	.container-article{
+		max-width: 60%;
+	}
+
+	.container-section{
+		max-width: 40%;
+	}
 }
 
-.container-2{
-	max-width: 40%;
+@media (min-width: 350px) and (max-width: 840px){
+  .container-article {
+  	max-width: 100%;
+  }
+	.container-section {
+		max-width: 100%;
+	}
 }
-
-
 .row{
 	 display: block;
 	 max-width: 100%;
@@ -114,98 +120,62 @@ p{
 
 .col-10 {
   max-width: 10%;
+  text-align: center;
 }
 
 .col-25 {
   max-width: 25%;
-	background-color: #CBD2FF;
+	background-color: #f0f8ff;
+	text-align: center
 }
 
 .col-75 {
   max-width: 75%;
+  padding: 0 1vw;
 }
 
 .col-90 {
   max-width: 90%;
-	background-color: #CBD2FF;
+  padding: 0 1vw;
+	background-color: #f0f8ff;
 }
 
-@media (min-width: 350px) {
-  .container-1 {
-  	max-width: 720px;
-    clear: both;
-  }
-}
-.barra-30{
-
-	background-color: blue;
-	border: 0;
-	margin-top: 1vh;
-	max-width: 30%;
-	color: white;
+[class*="barra-"] {
+	border: solid 0.8vh white;
+	padding: 2px;
 	text-align: left;
+	color: white;
 }
-.barra-30 p{
-	display: inline;
-	padding: 2px 0px 0px 7px;
+
+[class*="barra-"] > p{
+	display: inline-block;
+	padding: 1px 0px 0px 10px;
+	font-size: 1.2em;
+}
+
+.barra-30{
+	background-color: blue;
+	max-width: 30%;
+}
+
+.barra-50{
+	background-color: orange;
+	max-width: 50%;
 }
 
 .barra-80{
-	background-color: blue;
+	background-color: red;
 	max-width: 80%;
-	color: white;
-	text-align: left;
 }
-.barra-80 p{
-	display: inline;
-	padding: 2px 0px 0px 7px;
+
+.barra-100{
+	background-color: green;
+	max-width: 100%;
 }
 
 .new-footer{
-	max-width: 100%;
-	background-color: white;
-	padding: 1vw;
 	text-align: right;
-	border-top-style: double;
-	border-top-color: black;
 	clear: both;
 }
-
-
-/*Menu de navegación*/
-.navmenu{
-	display: inline-block;
-	position: static;
-	background: blue;
-	width: 100%;
-	max-height: 50px;
-	margin: 0;	
-	padding: 10px 0;
-	text-align: center;
-}
-
-.navmenu ul{
-	list-style: none;
-	margin: 0;
-	padding:0;
-}
-
-.navmenu li{
-	display: inline;
-	margin-left: 40px;
-}
-
-.navmenu li a{
-	text-decoration: none;
-	text-transform: uppercase;
-	font-family: ‘Arial Black’, arial, sans-serif;
-	font-style: bold;
-	font-size: 20px;
-	letter-spacing: 2px;
-	color: white;
-}
-
-
-
 
 
